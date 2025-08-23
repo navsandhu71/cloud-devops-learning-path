@@ -6,7 +6,7 @@ pipeline {
     // Pipeline configuration: Uses any available agent and Maven tool named 'maven'
     
     environment {
-        SERVER_IP = '98.86.230.111'  // Your server IP
+        SERVER_IP = '172.21.228.178'  // Your server IP
         TOMCAT_PORT = '8090'
         APP_CONTEXT = 'addressbook'
     }
@@ -15,7 +15,7 @@ pipeline {
     stages {
         stage("Checkout") {   
             steps {               	 
-                git branch: 'main', url: 'https://github.com/manikcloud/cloud-devops-learning-path.git'        	 
+                git branch: 'main', url: 'https://github.com/navsandhu71/cloud-devops-learning-path.git'        	 
             }    
         }
         // Checkout stage: Downloads source code from GitHub repository main branch
