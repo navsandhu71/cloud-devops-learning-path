@@ -36,7 +36,7 @@ pipeline {
                 script {
                     echo "Checking out code from repository..."
                 }
-                git branch: 'main', url: 'https://github.com/manikcloud/cloud-devops-learning-path.git'
+                git branch: 'main', url: 'https://github.com/navsandhu71/cloud-devops-learning-path.git'
                 script {
                     echo "Code checkout completed successfully"
                 }
