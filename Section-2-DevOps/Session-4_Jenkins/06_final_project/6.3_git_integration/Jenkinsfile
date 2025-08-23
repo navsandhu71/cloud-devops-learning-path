@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     tools {
-        maven 'maven'
+        maven 'mvn'
     }
     // Pipeline configuration: Uses any available agent and Maven tool named 'maven'
     
