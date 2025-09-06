@@ -1,5 +1,51 @@
 # 🐳 Docker Basics - Commands & Networking
 
+## 🔄 Docker Container Lifecycle
+
+### 📚 **Theory: Understanding Docker Lifecycle**
+
+Docker containers go through several states during their lifetime:
+
+1. **Image Creation**: Build from Dockerfile or pull from registry
+2. **Container Creation**: Create container from image (not running yet)
+3. **Running State**: Container is actively executing processes
+4. **Stopped State**: Container exists but processes are stopped
+5. **Removal**: Container is completely deleted
+
+**Key Concepts:**
+- **Images are immutable** - they don't change once built
+- **Containers are ephemeral** - they can be created, stopped, and destroyed
+- **Data persistence** requires volumes or bind mounts
+- **One process per container** is the best practice
+
+### 📊 **Simple Lifecycle Flow**
+
+```mermaid
+graph LR
+    A[Dockerfile] --> B[Image]
+    B --> C[Container Created]
+    C --> D[Running]
+    D --> E[Stopped]
+    E --> F[Removed]
+    E --> D
+    
+    style B fill:#e3f2fd
+    style D fill:#e8f5e8
+    style E fill:#fff3e0
+```
+
+### 🎯 **Essential Commands**
+
+| Command | Purpose |
+|---------|---------|
+| `docker build -t name .` | Build image |
+| `docker run name` | Create & start container |
+| `docker stop container` | Stop container |
+| `docker start container` | Restart stopped container |
+| `docker rm container` | Remove container |
+
+---
+
 ## 📋 Essential Docker Commands
 
 ### **Container Management**
