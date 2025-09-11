@@ -29,9 +29,9 @@ graph LR
 
 ---
 
-## 🚀 Quick Setup (Recommended)
+## 🚀 Quick Setup (Choose Your Path)
 
-### **Option A: Automated Setup Script**
+### **Option A: k3s (Recommended for Learning)**
 ```bash
 # Clone repository and navigate
 git clone https://github.com/manikcloud/cloud-devops-learning-path.git
@@ -42,7 +42,18 @@ chmod +x quick-setup.sh
 ./quick-setup.sh
 ```
 
-### **Option B: Manual Installation**
+### **Option B: EKS (For AWS LoadBalancer Services)**
+```bash
+# For LoadBalancer services and production features
+# See detailed guide: eks-setup.md
+
+# Quick EKS setup
+eksctl create cluster --name my-cluster --region us-east-1 --nodes 2
+```
+
+> **💡 When to use EKS:** Required for LoadBalancer services with AWS ALB/NLB integration. See **[eks-setup.md](./eks-setup.md)** for complete guide.
+
+### **Option C: Manual k3s Installation**
 ```bash
 # Install k3s
 curl -sfL https://get.k3s.io | sh -
@@ -187,6 +198,16 @@ You're ready for the next session when:
 
 ### **Ready for More?**
 **[→ Next: Learn Kubernetes Concepts](../02-k8s-concepts/)**
+
+---
+
+## 📚 Additional Setup Options
+
+### **☁️ EKS (AWS Managed Kubernetes)**
+For production workloads and AWS LoadBalancer services:
+- **[📖 Complete EKS Setup Guide](./eks-setup.md)** - eksctl installation and cluster creation
+- **Use case:** LoadBalancer services, AWS integrations, production deployments
+- **Cost:** ~$0.10/hour + EC2 instances
 
 ---
 
